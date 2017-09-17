@@ -16,7 +16,9 @@ $('.rounded').flowtype({
 
 jQuery(function() {
   $.getJSON("https://spreadsheets.google.com/feeds/list/15bwiN1SvMBnvk-XWASutNxd7gdrI1g6eZVLRH92pFJs/od6/public/values?alt=json", function(data) {
-    var today = data.feed.entry[0].gsx$start.$t.split(' at')[0]
+    //var today = data.feed.entry[0].gsx$start.$t.split(' at')[0]
+    var today = moment().tz("America/New_York").format('MMMM DD, YYYY');
+
     console.log("Today: " + today);
     $.each(data.feed.entry, function(index, value) {
       var start = value.gsx$start.$t;

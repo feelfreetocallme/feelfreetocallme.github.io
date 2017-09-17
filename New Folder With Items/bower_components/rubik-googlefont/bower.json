@@ -1,0 +1,17 @@
+{
+    "name": "rubik-googlefont",
+    "license": "OFL",
+    "authors": [
+        "Hubert and Fischer, Meir Sadan, Cyreal"
+    ],
+    "homepage": "https://fonts.google.com/",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/google-fonts-bower/rubik-bower.git"
+    },
+    "description": "Rubik font",
+    "keywords": [
+        "font",
+        "SANS_SERIF"
+    ]
+}

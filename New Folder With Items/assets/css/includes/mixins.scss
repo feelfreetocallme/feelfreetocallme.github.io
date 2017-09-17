@@ -1,0 +1,55 @@
+$phone-max-width: 480px;
+$tablet-width: 768px;
+$desktop-width: 1280px;
+$smallerDesktop-width: 1150px;
+
+
+@mixin ultra {
+    @media (min-width: #{$desktop-width} + 1) {
+        @content;
+    }
+}
+
+@mixin smallerDesktop {
+    @media (max-width: #{$smallerDesktop-width}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (max-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: #{$tablet-width}) {
+        @content;
+    }
+}
+
+@mixin phone {
+    @media (max-width: #{$phone-max-width} - 1) {
+        @content;
+    }
+}
+
+@mixin phoneHorizontal {
+    @media (orientation: landscape) and (max-width:#{$phone-max-width} - 1) {
+        @content;
+    }
+}
+
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@include ultra {
+    html {
+        font-weight: 300;
+    }
+}
